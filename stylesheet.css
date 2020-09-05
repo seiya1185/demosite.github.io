@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Roboto,"Noto Sans CJK JP";
+  line-height: 2.1;
+  color: #141414;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.page-header {
+  background: #1B1310;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+  border-bottom: 1px solid white;
+  height: 74px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.logo a {
+  color: white;
+}
+
+.main-nav {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav li {
+  margin-left: 55px;
+}
+
+.main-nav a {
+  color: white;
+  font-weight: bold;
+}
+
+.burger-btn{
+	display: none;
+}
+
+#home {
+  background-image: url(img/fv-bgi@2x.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.main-theme {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  border:2px solid #fff;
+  padding: 34px 42px;
+}
+
+.page-about {
+  width: 1030px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.about-wrapper {
+  margin-top: 72px;
+}
+
+.theme {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+}
+
+.sentence {
+  font-family: "游明朝";
+  font-size: 14px;
+  margin-top: 42px;
+  font-weight: bold;
+}
+
+.sub-theme1 {
+  font-family: "游明朝";
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.page-service {
+  width: 1030px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.up {
+  margin-top: 70px;
+  display: flex;
+}
+
+.up-content {
+  width: 480px;
+  margin-left: 70px;
+}
+
+.down {
+  margin-top: 50px;
+  height: 240px;
+  display: flex;
+}
+
+.down-content {
+  width: 480px;
+  margin-right: 70px;
+}
+
+.sub-theme2 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "游明朝";
+}
+
+.sub-theme3 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "游明朝";
+}
+
+.news {
+  margin-top: 150px;
+}
+
+.news-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.news-content p {
+  font-family: "Hiragino Kaku Gothic ProN";
+  font-size: 13px;
+  padding: 25px 33px;
+}
+
+.news-wrapper1, .news-wrapper2, .news-wrapper3 {
+  max-width: 320px;
+  box-shadow: 0px 0px 6px rgba(27, 19, 16, 0.4);
+}
+
+.news-wrapper2 {
+  margin: 0 34px;
+}
+
+form {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 152px;
+  width: 700px;
+}
+
+form h3 {
+  font-family: "游明朝";
+  font-size: 24px;
+}
+
+label {
+  font-size: 1em;
+  display: block;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  border: 1px solid #141414;
+  width: 100%;
+  max-width: 700px;
+  padding: 5px;
+}
+
+textarea {
+  height: 171px;
+}
+
+.name {
+  margin-top: 69px;
+}
+
+.tel, .email, .message {
+  margin-top: 22px;
+}
+
+.button {
+  width: 235px;
+  height: 59px;
+  background: #1B1310;
+  color: #FFFFFF;
+  box-shadow: 0px 0px 8px #1B1310;
+  border-radius: 30px;
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: Avenir;
+}
+
+footer {
+  height: 79px;
+  background: #1B1310;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-1 {
+  font-size: 20px;
+  color: white;
+  line-height: 79px;
+}
+
+/* レスポンシブデザイン */
+@media(max-width:768px ){
+
+  #home, .page-header, .page-about, .page-service, .news, form, footer {
+    width: 100%;
+  }
+
+  .page-about, .page-service, .news, form {
+    padding: 0 15px;
+  }
+
+  .page-header {
+    padding: 0.5px;
+  }
+
+  .logo {
+    margin-left: 15px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+/* ハンバーガーメニュー */
+  .burger-btn{
+	display: block;
+	width: 39px;
+	height: 39px;
+	position: relative;
+	z-index: 3;
+/*   codepenの挙動のため */
+  background-color:transparent;
+  border:none;
+  }
+
+  .bar{
+	width: 20px;
+	height: 1px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+  }
+
+  .bar_top{
+	top: 10px;
+  }
+  .bar_mid{
+	top: 50%;
+	transform: translate(-50%,-50%);
+  }
+  .bar_bottom{
+	bottom: 10px;
+  }
+  .burger-btn.close .bar_top{
+	transform: translate(-50%,10px) rotate(45deg);
+	transition: transform .3s;
+  }
+  .burger-btn.close .bar_mid{
+	opacity: 0;
+	transition: opacity .3s;
+  }
+  .burger-btn.close .bar_bottom{
+	transform: translate(-50%,-8px) rotate(-45deg);
+	transition: transform .3s;
+  }
+/* ここまで */
+
+  #home {
+    background-image: url(img/fv-bgi_sp@2x.jpg);
+    height: 590px;
+  }
+
+  .main-theme {
+    text-align: center;
+    font-size: 1rem;
+    padding: 13px 32px;
+  }
+
+  .page-about {
+    margin-top: 95px;
+  }
+
+  .page-service {
+    margin-top: 100px;
+  }
+
+  .sub-theme1, .sub-theme2, .sub-theme3 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .up {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .up-image {
+    order: 2;
+  }
+
+  .up-content {
+    order: 1;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .up-image {
+    margin-top: 40px;
+  }
+
+  .up-image img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    }
+
+  .down {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .down-content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .down-image {
+    margin-top: 40px;
+  }
+
+  .down-image img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .sentence {
+    margin-top: 30px;
+  }
+
+  .news {
+    margin-top: 0;
+    margin-top: 300px;
+  }
+
+  .news-content {
+    display: grid;
+    gap: 50px;
+  }
+
+  .news-content p {
+    font-family: Roboto;
+    font-size: 13px;
+    padding: 13px 30px;
+  }
+
+  .news-wrapper1, .news-wrapper2, .news-wrapper3 {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
